@@ -7,18 +7,18 @@ default settings for HLS live streaming. Built on Alpine Linux.
 * ffmpeg 4.4 (compiled from source)
 * Default HLS settings (See: [nginx.conf](nginx.conf))
 
-[![Docker Stars](https://img.shields.io/docker/stars/alfg/nginx-rtmp.svg)](https://hub.docker.com/r/alfg/nginx-rtmp/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alfg/nginx-rtmp.svg)](https://hub.docker.com/r/alfg/nginx-rtmp/)
-[![Docker Automated build](https://img.shields.io/docker/automated/alfg/nginx-rtmp.svg)](https://hub.docker.com/r/alfg/nginx-rtmp/builds/)
-[![Build Status](https://travis-ci.org/alfg/docker-nginx-rtmp.svg?branch=master)](https://travis-ci.org/alfg/docker-nginx-rtmp)
+[![Docker Stars](https://img.shields.io/docker/stars/richardhopton/nginx-rtmp.svg)](https://hub.docker.com/r/richardhopton/nginx-rtmp/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/richardhopton/nginx-rtmp.svg)](https://hub.docker.com/r/richardhopton/nginx-rtmp/)
+[![Docker Automated build](https://img.shields.io/docker/automated/richardhopton/nginx-rtmp.svg)](https://hub.docker.com/r/richardhopton/nginx-rtmp/builds/)
+[![Build Status](https://travis-ci.org/richardhopton/docker-nginx-rtmp.svg?branch=master)](https://travis-ci.org/richardhopton/docker-nginx-rtmp)
 
 ## Usage
 
 ### Server
 * Pull docker image and run:
 ```
-docker pull alfg/nginx-rtmp
-docker run -it -p 1935:1935 -p 8080:80 --rm alfg/nginx-rtmp
+docker pull richardhopton/nginx-rtmp
+docker run -it -p 1935:1935 -p 8080:80 --rm richardhopton/nginx-rtmp
 ```
 or 
 
@@ -122,9 +122,9 @@ ffmpeg version 4.4 Copyright (c) 2000-2021 the FFmpeg developers
 ### FFmpeg Hardware Acceleration
 A `Dockerfile.cuda` image is available to enable FFmpeg hardware acceleration via the [NVIDIA's CUDA](https://trac.ffmpeg.org/wiki/HWAccelIntro#CUDANVENCNVDEC).
 
-Use the tag: `alfg/nginx-rtmp:cuda`:
+Use the tag: `richardhopton/nginx-rtmp:cuda`:
 ```
-docker run -it -p 1935:1935 -p 8080:80 --rm alfg/nginx-rtmp:cuda
+docker run -it -p 1935:1935 -p 8080:80 --rm richardhopton/nginx-rtmp:cuda
 ```
 
 You must have a supported platform and driver to run this image.
